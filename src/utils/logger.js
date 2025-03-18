@@ -21,8 +21,8 @@ export const logger = winston.createLogger({
   format: combine(
     timestamp(),
     json(),
-    printf(({ level, timestamp, message }) =>
-      JSON.stringify(`${timestamp}, ${level}, ${message}`)
+    printf(
+      ({ level, timestamp, message }) => `${timestamp}, ${level}, ${message}`
     )
   ),
   transports: [fileRotateTransport],
