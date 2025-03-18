@@ -1,0 +1,4 @@
+"2025-03-18T09:11:21.455Z, error, Error: USER_ALREADY_EXIST"
+"2025-03-18T09:11:21.456Z, error, {\"data\":{\"name\":\"sahil\",\"email\":\"sahil@gmail.com\",\"password\":\"sahil@123\",\"age\":\"22\"}}"
+"2025-03-18T09:17:18.699Z, error, Error: USER_ALREADY_EXIST"
+"2025-03-18T09:17:18.701Z, error, {\"data\":{\"name\":\"sahil\",\"email\":\"sahil@gmail.com\",\"password\":\"sahil@123\",\"age\":\"22\"}}"
