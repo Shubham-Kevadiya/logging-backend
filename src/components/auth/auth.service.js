@@ -11,7 +11,7 @@ const registerUser = async (userData) => {
         return user.email === userData.email;
       });
       if (existingUser && existingUser.length > 0) {
-        logger.error(new Error("USER_ALREADY_EXIST"), { data: userData });
+        // logger.error(`USER_ALREADY_EXIST, ${JSON.stringify(userData)}`);
         throw new Error("USER_ALREADY_EXIST");
       }
       users.push(userData);
@@ -21,9 +21,7 @@ const registerUser = async (userData) => {
     fs.writeFileSync(common.DATA.PATH_TO_DATA, JSON.stringify(users));
     return userData;
   } catch (error) {
-    logger.error(
-      new Error(JSON.stringify({ ...error, data: { ...userData } }))
-    );
+    logger.error(`${error.message}, ${JSON.stringify(userData)}`);
     throw new Error(error.message);
   }
 };
@@ -37,24 +35,22 @@ const userLogin = async (loginData) => {
       });
 
       if (!user || user.length == 0) {
-        logger.error(new Error("USER_NOT_FOUND"), { data: loginData });
+        // logger.error(new Error("USER_NOT_FOUND"), { data: loginData });
         throw new Error("USER_NOT_FOUND");
       }
       if (user[0].password !== loginData.password) {
-        logger.error(new Error("INVALID_USER_OR_PASSWORD"), {
-          data: loginData,
-        });
+        // logger.error(new Error("INVALID_USER_OR_PASSWORD"), {
+        //   data: loginData,
+        // });
         throw new Error("INVALID_USER_OR_PASSWORD");
       }
       return user[0];
     } else {
-      logger.error(new Error("DB is Empty!"), { data: loginData });
+      // logger.error(new Error("DB is Empty!"), { data: loginData });
       throw new Error("USER_ALREADY_EXIST");
     }
   } catch (error) {
-    logger.error(
-      new Error(JSON.stringify({ ...error, data: { ...loginData } }))
-    );
+    logger.error(`${error.message}, ${JSON.stringify(loginData)}`);
     throw new Error(error.message);
   }
 };
