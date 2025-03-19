@@ -3,7 +3,7 @@ import express from "express";
 import morgan from "morgan";
 import config from "./src/config/config.js";
 import apiRoute from "./src/indexRoute.js";
-import { setUpMorgan } from "./src/middleware/morgen.js";
+import { setUpMorgan } from "./src/middleware/morgan.js";
 import { errorHandler } from "./src/utils/errorHandler.js";
 
 const port = config.port.port || 3000;

@@ -19,6 +19,9 @@ const registerUser = async (userData) => {
       users = [userData];
     }
     fs.writeFileSync(common.DATA.PATH_TO_DATA, JSON.stringify(users));
+    logger.info(
+      `User ${userData.name} with ${userData.email} email registered successfully`
+    );
     return userData;
   } catch (error) {
     logger.error(`${error.message}, ${JSON.stringify(userData)}`);
@@ -44,6 +47,9 @@ const userLogin = async (loginData) => {
         // });
         throw new Error("INVALID_USER_OR_PASSWORD");
       }
+      logger.info(
+        `User ${userData.name} with ${loginData.email} email Logged in successfully`
+      );
       return user[0];
     } else {
       // logger.error(new Error("DB is Empty!"), { data: loginData });

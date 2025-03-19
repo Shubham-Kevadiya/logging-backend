@@ -93,7 +93,7 @@ combined.log file
 2025-03-18T09:55:21.766Z, error, USER_ALREADY_EXIST, {"name":"John Doe","email":"john.doe@example.com","password":"securePassword123","age":"30"}
 ```
 
-- morgen
+- morgan
 
 ```bash
 shell
@@ -139,7 +139,7 @@ combined.log file
 2025-03-18T10:03:36.073Z, error, USER_NOT_FOUND, {"name":"John Doe","email":"john.doe@example.com","password":"securePassword123","age":"30"}
 ```
 
-- morgen
+- morgan
 
 ```bash
 shell

@@ -16,7 +16,8 @@ const fileRotateTransport = new winston.transports.DailyRotateFile({
 });
 
 export const logger = winston.createLogger({
-  levels: winston.config.syslog.levels,
+  level: common.LOGGER_LEVEL,
+  // levels: winston.config.syslog.levels,
   // format: combine(errors({ stack: true }), timestamp(), json()),
   format: combine(
     timestamp(),

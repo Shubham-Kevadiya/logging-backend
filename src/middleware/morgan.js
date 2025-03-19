@@ -3,7 +3,6 @@ import { logTail } from "../utils/logger.js";
 
 const setUpMorgan = morgan((tokens, req, res) => {
   const entry = {
-    // requestId: tokens.id(req, res),
     method: tokens.method(req, res),
     url: tokens.url(req, res),
     status: parseInt(tokens.status(req, res), 10),
