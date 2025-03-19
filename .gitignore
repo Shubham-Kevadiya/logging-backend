@@ -1,4 +1,5 @@
 .env
 node_modules/
 .vscode
-.289acbf94ba4a38833a9462b85fd8f7575665860-audit.json
+logs/
+user.json

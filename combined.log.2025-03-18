@@ -1,3 +1,0 @@
-2025-03-18T09:55:21.766Z, error, USER_ALREADY_EXIST, {"name":"sahil","email":"sahil@gmail.com","password":"sahil@123","age":"22"}
-2025-03-18T10:03:36.071Z, error, Error: USER_NOT_FOUND
-2025-03-18T10:03:36.073Z, error, USER_NOT_FOUND, {"email":"shubham1@gmail.com","password":"shubham@123"}
